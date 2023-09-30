@@ -77,3 +77,17 @@ sudo dnf group list
 #   Development Tools
 sudo dnf group install "Development Tools" -y
 
+# To install the group with options
+sudo dnf group install --with-optional "Development Tools"-y
+
+# To remove the group
+sudo dnf group remove "Development Tools" -y 
+
+# To see more available groups apart from the default ones
+sudo dnf group list --hidden
+
+# To delete a package plus its dependencies we can use
+sudo dnf autoremove -y
+
+# To get a history of all dnf related command we can use
+sudo dnf history
