@@ -19,3 +19,20 @@ sudo apt show libnginx-mod-stream
 
 # To get all package details that have the name nginx excluding description
 sudo apt search --names-only nginx
+
+# To get packages with specific names
+sudo apt search nginx module image
+
+# To remove a package that is no longer required
+sudo apt remove nginx -y
+
+# To remove packages that are no longer needed after removing the main package above
+# The following packages were automatically installed and are no longer required:
+# libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream nginx-common nginx-core
+sudo apt autoremove -y
+
+# Lets install Nginx again and see how to remove it plus its dependencies
+sudo apt install nginx -y
+
+# To remove Nginx plus its dependent packages
+sudo apt autoremove nginx -y 
